@@ -1,0 +1,10 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lucas Silva profile placeholder</title>
+  <desc id="desc">A minimal portfolio profile placeholder with Lucas Silva initials.</desc>
+  <rect width="720" height="720" rx="48" fill="#101820"/>
+  <rect x="32" y="32" width="656" height="656" rx="36" fill="#F8FAFC"/>
+  <path d="M96 154C96 123.072 121.072 98 152 98H568C598.928 98 624 123.072 624 154V566C624 596.928 598.928 622 568 622H152C121.072 622 96 596.928 96 566V154Z" fill="#7C3AED"/>
+  <path d="M112 502C196 434 265 420 360 452C450 482 530 460 608 390V566C608 584.778 592.778 600 574 600H146C127.222 600 112 584.778 112 566V502Z" fill="#38BDF8"/>
+  <path d="M168 192H230V424H352V478H168V192Z" fill="white"/>
+  <path d="M390 408C413 427 444 438 477 438C511 438 530 426 530 405C530 383 511 376 464 362C398 343 367 318 367 261C367 202 415 187 471 187C509 187 548 198 576 218L550 266C529 252 500 241 472 241C443 241 424 250 424 271C424 290 442 298 483 310C553 331 588 356 588 399C588 459 540 491 478 491C429 491 388 477 358 451L390 408Z" fill="white"/>
+</svg>

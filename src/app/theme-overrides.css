@@ -1,0 +1,13 @@
+:root {
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --accent: #38bdf8;
+  --accent-foreground: #071827;
+}
+
+.dark {
+  --primary: #c084fc;
+  --primary-foreground: #071010;
+  --accent: #38bdf8;
+  --accent-foreground: #071827;
+}
