@@ -209,7 +209,7 @@ export const projects = [
       "Redis",
     ],
     githubUrl: "https://github.com/LucasSilva194/cdi-chatbot",
-    demoUrl: null,
+    demoUrl: "https://cdi-chatbot-demo.vercel.app/",
     imageUrl: null,
     imageAlt: null,
     problem:
