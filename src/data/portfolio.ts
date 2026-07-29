@@ -5,9 +5,11 @@ import {
   GraduationCap,
   Layers3,
   Palette,
+  RefreshCcw,
   Rocket,
   Server,
   Settings2,
+  TrendingUp,
 } from "lucide-react";
 
 export const profile = {
@@ -110,17 +112,17 @@ export const skillGroups = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "Java", "Python", "Ruby", "Liquid"],
+    skills: ["TypeScript", "JavaScript", "Java", "Liquid"],
   },
   {
     title: "Frontend",
     icon: Layers3,
-    skills: ["Vue 3", "React", "React Native", "HTML", "CSS", "TailwindCSS"],
+    skills: ["Vue 3", "React", "Next.js", "HTML", "CSS", "TailwindCSS"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: ["Java", "Spring Boot", "Spring Batch", "Node.js", "Ruby on Rails"],
+    skills: ["Java", "Spring Boot", "Spring Batch", "Node.js"],
   },
   {
     title: "Databases",
@@ -146,6 +148,30 @@ export const skillGroups = [
     title: "Design & Productivity",
     icon: Palette,
     skills: ["Adobe Creative Suite", "Microsoft Office Suite"],
+  },
+];
+
+export const technologyJourney = [
+  {
+    title: "Currently learning",
+    icon: TrendingUp,
+    description:
+      "Technologies and practices Lucas is actively deepening through portfolio work, professional projects, and focused study.",
+    items: [
+      "Next.js",
+      "Vercel",
+      "Spring Batch",
+      "Playwright",
+      "System design fundamentals",
+      "AI-assisted workflow tools",
+    ],
+  },
+  {
+    title: "Previous experience",
+    icon: RefreshCcw,
+    description:
+      "Technologies Lucas has worked with before, but does not currently use as part of his main day-to-day stack.",
+    items: ["Python", "Ruby", "Ruby on Rails", "React Native", "Three.js"],
   },
 ];
 
