@@ -18,7 +18,7 @@ export const profile = {
   location: "Vila Nova de Gaia, Portugal",
   email: "lucas.silva98@outlook.pt",
   shortDescription:
-    "Full Stack Software Developer with experience building internal APIs, web applications, and workflow automations. I mainly work with TypeScript, Vue 3, Java, and Spring.",
+    "Full Stack Software Developer with experience building internal APIs, web applications, and workflow automations. I mainly work with TypeScript, Vue 3, React, Java, Spring, and Quarkus.",
   about:
     "Lucas Silva is a Full Stack Software Developer with experience in web development, internal APIs, workflow automations, and enterprise applications. He works well in Agile environments and brings strong communication, collaboration, organization, and a constant drive to learn into every project.",
   links: {
@@ -45,7 +45,7 @@ export const experience = [
     location: "Maia, Portugal",
     responsibilities: [
       "Develop internal APIs, workflow automations, and web applications.",
-      "Work mainly with TypeScript, Vue 3, Java, and Spring in enterprise environments.",
+      "Work mainly with TypeScript, Vue 3, React, Java, Spring, Spring Batch, and Quarkus in enterprise environments.",
       "Collaborate with cross-functional teams to ship reliable internal tooling.",
     ],
     impact: [
@@ -122,7 +122,7 @@ export const skillGroups = [
   {
     title: "Backend",
     icon: Server,
-    skills: ["Java", "Spring Boot", "Spring Batch", "Node.js"],
+    skills: ["Java", "Spring Boot", "Spring Batch", "Quarkus", "Node.js"],
   },
   {
     title: "Databases",
@@ -158,9 +158,11 @@ export const technologyJourney = [
     description:
       "Technologies and practices Lucas is actively deepening through portfolio work, professional projects, and focused study.",
     items: [
+      "Angular",
+      "React",
+      "Quarkus",
       "Next.js",
       "Vercel",
-      "Spring Batch",
       "Playwright",
       "System design fundamentals",
       "AI-assisted workflow tools",
