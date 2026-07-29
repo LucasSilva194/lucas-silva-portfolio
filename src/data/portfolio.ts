@@ -22,7 +22,8 @@ export const profile = {
   links: {
     github: "https://github.com/LucasSilva194",
     linkedin: "https://www.linkedin.com/in/lucasesilva-dev",
-    cv: "/cv/lucas-silva-cv.pdf",
+    cv: "/download-cv",
+    cvFile: "/cv/lucas-silva-cv.pdf",
   },
 };
 

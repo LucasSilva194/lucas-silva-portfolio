@@ -10,21 +10,52 @@ import { profile } from "@/data/portfolio";
 
 export function Contact() {
   const [status, setStatus] = useState("");
+  const [statusTone, setStatusTone] = useState<"success" | "error">("success");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    const form = event.currentTarget;
     const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") ?? "");
-    const email = String(formData.get("email") ?? "");
-    const message = String(formData.get("message") ?? "");
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    );
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      message: String(formData.get("message") ?? ""),
+      company: String(formData.get("company") ?? ""),
+    };
 
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    setStatus("Your email client should open with the message prepared.");
+    setIsSubmitting(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json()) as { message?: string };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Unable to send your message.");
+      }
+
+      setStatusTone("success");
+      setStatus(result.message ?? "Message sent successfully.");
+      form.reset();
+    } catch (error) {
+      setStatusTone("error");
+      setStatus(
+        error instanceof Error
+          ? error.message
+          : "Unable to send your message right now.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -108,6 +139,15 @@ export function Contact() {
                   />
                 </label>
               </div>
+              <label className="sr-only" aria-hidden="true">
+                Company
+                <input
+                  name="company"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </label>
               <label className="mt-5 grid gap-2 text-sm font-medium text-card-foreground">
                 Message
                 <textarea
@@ -119,12 +159,19 @@ export function Contact() {
                 />
               </label>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Button type="submit">
+                <Button type="submit" disabled={isSubmitting}>
                   <Send className="h-4 w-4" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
                 {status ? (
-                  <p className="text-sm text-muted-foreground" role="status">
+                  <p
+                    className={
+                      statusTone === "success"
+                        ? "text-sm text-muted-foreground"
+                        : "text-sm text-red-500"
+                    }
+                    role="status"
+                  >
                     {status}
                   </p>
                 ) : null}
