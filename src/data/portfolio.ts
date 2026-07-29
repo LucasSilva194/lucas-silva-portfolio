@@ -4,11 +4,10 @@ import {
   Database,
   GraduationCap,
   Layers3,
-  Palette,
   RefreshCcw,
   Rocket,
   Server,
-  Settings2,
+  TestTube2,
   TrendingUp,
 } from "lucide-react";
 
@@ -20,7 +19,7 @@ export const profile = {
   shortDescription:
     "Full Stack Software Developer with experience building internal APIs, web applications, and workflow automations. I mainly work with TypeScript, Vue 3, React, Java, Spring, and Quarkus.",
   about:
-    "Lucas Silva is a Full Stack Software Developer with experience in web development, internal APIs, workflow automations, and enterprise applications. He works well in Agile environments and brings strong communication, collaboration, organization, and a constant drive to learn into every project.",
+    "I am a Full Stack Software Developer with experience in web development, internal APIs, workflow automations, and enterprise applications. I enjoy building practical software that makes teams faster, clearer, and less dependent on repetitive manual work. I work well in Agile environments and value clear communication, collaboration, organization, and continuous learning.",
   links: {
     github: "https://github.com/LucasSilva194",
     linkedin: "https://www.linkedin.com/in/lucasesilva-dev",
@@ -30,11 +29,9 @@ export const profile = {
 };
 
 export const navItems = [
-  { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const experience = [
@@ -48,9 +45,20 @@ export const experience = [
       "Work mainly with TypeScript, Vue 3, React, Java, Spring, Spring Batch, and Quarkus in enterprise environments.",
       "Collaborate with cross-functional teams to ship reliable internal tooling.",
     ],
+    highlights: [
+      "Part of a 7-engineer team owning 5 internal platforms used by around 1,300 employees across UI, API, and data layers.",
+      "Hold end-to-end responsibility on internal platforms, from user interface work to backend services and data flows.",
+      "Report directly to the CEO on one of the internal platforms.",
+      "Promoted from Junior to Mid-level in under a year.",
+    ],
     impact: [
       "Contributing to internal tools that reduce repetitive operational work.",
       "Supporting API and automation work used by internal teams.",
+    ],
+    learnings: [
+      "How to balance business urgency with maintainable technical decisions in internal products.",
+      "How to communicate progress, trade-offs, and risk clearly with technical and non-technical stakeholders.",
+      "How ownership changes when a platform is used daily by a large internal user base.",
     ],
   },
   {
@@ -63,9 +71,17 @@ export const experience = [
       "Improved usability, consistency, and maintainability across the form workflow.",
       "Worked closely with product and engineering feedback during the internship.",
     ],
+    highlights: [
+      "Worked on a real product workflow with usability, consistency, and maintainability constraints.",
+      "Turned product feedback into UI and functional improvements inside an Agile environment.",
+    ],
     impact: [
       "Improved clarity and workflow consistency for a complex product form.",
       "Delivered a maintainable redesign within an Agile product environment.",
+    ],
+    learnings: [
+      "How small UI decisions can reduce friction in complex enterprise forms.",
+      "How to read existing product patterns before changing a workflow.",
     ],
   },
   {
@@ -78,9 +94,17 @@ export const experience = [
       "Design and produce digital content for communication and brand presence.",
       "Support ongoing improvements across the site, visual assets, and publishing workflow.",
     ],
+    highlights: [
+      "Built and maintained public Shopify websites with custom Liquid, CSS, JavaScript, and GraphQL work.",
+      "Combined implementation, visual design, and content production for public-facing brands.",
+    ],
     impact: [
       "Maintained a long-running digital presence for two public-facing brands.",
       "Combined Shopify development, visual design, and content execution.",
+    ],
+    learnings: [
+      "How to ship practical web improvements within the constraints of an existing commerce platform.",
+      "How brand, content, and frontend implementation work together in live public websites.",
     ],
   },
 ];
@@ -122,12 +146,12 @@ export const skillGroups = [
   {
     title: "Backend",
     icon: Server,
-    skills: ["Java", "Spring Boot", "Spring Batch", "Quarkus", "Node.js"],
+    skills: ["Spring Boot", "Spring Batch", "Quarkus", "Node.js", "Redis"],
   },
   {
     title: "Databases",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Microsoft SQL Server"],
+    skills: ["PostgreSQL", "MySQL", "Microsoft SQL Server"],
   },
   {
     title: "APIs & Integrations",
@@ -135,19 +159,14 @@ export const skillGroups = [
     skills: ["REST", "GraphQL", "Shopify"],
   },
   {
-    title: "Tools",
-    icon: Settings2,
-    skills: ["Git", "Docker", "Postman", "Playwright"],
-  },
-  {
-    title: "Practices",
+    title: "DevOps & Cloud",
     icon: Rocket,
-    skills: ["OOP", "Agile", "Workflow Automation"],
+    skills: ["Git", "Docker", "Vercel", "GitLab"],
   },
   {
-    title: "Design & Productivity",
-    icon: Palette,
-    skills: ["Adobe Creative Suite", "Microsoft Office Suite"],
+    title: "Testing",
+    icon: TestTube2,
+    skills: ["JUnit", "Playwright"],
   },
 ];
 
@@ -163,7 +182,6 @@ export const technologyJourney = [
       "Quarkus",
       "Next.js",
       "Vercel",
-      "Playwright",
       "System design fundamentals",
       "AI-assisted workflow tools",
     ],
@@ -173,7 +191,14 @@ export const technologyJourney = [
     icon: RefreshCcw,
     description:
       "Technologies Lucas has worked with before, but does not currently use as part of his main day-to-day stack.",
-    items: ["Python", "Ruby", "Ruby on Rails", "React Native", "Three.js"],
+    items: [
+      "Python",
+      "Ruby",
+      "Ruby on Rails",
+      "React Native",
+      "Three.js",
+      "MongoDB",
+    ],
   },
 ];
 
@@ -186,9 +211,9 @@ export const education = [
     icon: GraduationCap,
   },
   {
-    degree: "Professional Technician in Automotive Mechatronics",
-    institution: "ATEC - Training Academy",
-    period: "2016 - 2018",
+    degree: "Year Zero",
+    institution: "ISEP - School of Engineering, Polytechnic Institute of Porto",
+    period: "2020 - 2021",
     icon: Briefcase,
   },
 ];

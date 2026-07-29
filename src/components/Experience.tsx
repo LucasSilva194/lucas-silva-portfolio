@@ -1,4 +1,4 @@
-import { CalendarDays, MapPin, Sparkles } from "lucide-react";
+import { CalendarDays, Lightbulb, MapPin, Sparkles, Trophy } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -54,6 +54,44 @@ export function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                    <div className="rounded-md border border-border bg-background/60 p-4">
+                      <p className="flex items-center gap-2 text-sm font-semibold text-card-foreground">
+                        <Trophy className="h-4 w-4 text-accent" />
+                        Key Highlights
+                      </p>
+                      <ul className="mt-3 space-y-2">
+                        {item.highlights.map((highlight) => (
+                          <li
+                            key={highlight}
+                            className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                          >
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="rounded-md border border-border bg-background/60 p-4">
+                      <p className="flex items-center gap-2 text-sm font-semibold text-card-foreground">
+                        <Lightbulb className="h-4 w-4 text-accent" />
+                        What I Learned
+                      </p>
+                      <ul className="mt-3 space-y-2">
+                        {item.learnings.map((learning) => (
+                          <li
+                            key={learning}
+                            className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                          >
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            {learning}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
 
                   <div className="mt-6 rounded-md border border-primary/20 bg-primary/10 p-4">
                     <p className="flex items-center gap-2 text-sm font-semibold text-primary">

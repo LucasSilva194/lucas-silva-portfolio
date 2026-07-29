@@ -24,7 +24,7 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="A pragmatic developer focused on useful software."
-          description="Lucas combines web development, internal tooling, and workflow automation experience with a clear communication style and a steady appetite for learning."
+          description="I combine web development, internal tooling, and workflow automation experience with a clear communication style and a steady appetite for learning."
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">

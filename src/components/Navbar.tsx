@@ -80,7 +80,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/82 backdrop-blur-xl">
       <nav className="container-shell flex h-16 items-center justify-between">
         <Link
-          href="/#top"
+          href="/"
           className="group flex items-center gap-3 text-sm font-semibold"
           aria-label="Lucas Silva homepage"
         >

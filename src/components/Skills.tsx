@@ -10,32 +10,32 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="A full stack toolkit for modern product teams."
-          description="Technologies grouped by the way Lucas uses them: frontend delivery, backend systems, data, tooling, methods, and design productivity."
+          description="A practical overview of the technologies I use across frontend delivery, backend systems, data, tooling, methods, and design productivity."
         />
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="rounded-lg border-y border-border/70">
           {skillGroups.map((group, index) => {
             const Icon = group.icon;
 
             return (
               <Reveal key={group.title} delay={index * 0.05}>
-                <article className="h-full rounded-lg border border-border bg-card p-6 transition hover:-translate-y-1 hover:border-primary/45">
+                <div className="grid gap-4 border-b border-border/70 py-5 last:border-b-0 md:grid-cols-[13rem_1fr] md:items-center">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary/10 text-primary">
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="text-lg font-bold text-card-foreground">
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                       {group.title}
                     </h3>
                   </div>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {group.skills.map((skill) => (
                       <Badge key={skill} tone="muted">
                         {skill}
                       </Badge>
                     ))}
                   </div>
-                </article>
+                </div>
               </Reveal>
             );
           })}

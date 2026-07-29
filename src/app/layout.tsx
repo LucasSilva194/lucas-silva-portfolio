@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Lucas Silva" }],
   creator: "Lucas Silva",
+  icons: {
+    icon: "/images/profile-placeholder.svg",
+    shortcut: "/images/profile-placeholder.svg",
+    apple: "/images/profile-placeholder.svg",
+  },
   openGraph: {
     title: "Lucas Silva | Full Stack Software Developer",
     description:

@@ -46,7 +46,7 @@ export function Hero() {
               View Projects
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button href="#contact" variant="secondary">
+            <Button href="/contact" variant="secondary">
               <Mail className="h-4 w-4" />
               Contact
             </Button>
@@ -101,12 +101,12 @@ export function Hero() {
           </div>
           <div className="overflow-hidden rounded-lg border border-border bg-card p-3 shadow-soft">
             <Image
-              src="/images/profile-placeholder.svg?v=4"
-              alt="Lucas Silva profile placeholder"
+              src="/images/lucas-silva.jpg"
+              alt="Portrait of Lucas Silva"
               width={720}
               height={720}
               priority
-              className="aspect-square w-full rounded-md object-cover"
+              className="aspect-square w-full rounded-md object-cover object-[52%_42%]"
             />
           </div>
         </div>

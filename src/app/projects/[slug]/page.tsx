@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <main>
         <section className="section-spacing">
           <div className="container-shell">
-            <Button href="/#projects" variant="ghost" className="mb-8">
+            <Button href="/projects" variant="ghost" className="mb-8">
               <ArrowLeft className="h-4 w-4" />
               Back to Projects
             </Button>
