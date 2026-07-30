@@ -21,8 +21,8 @@ export function Hero() {
       id="top"
       className="container-shell grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20"
     >
-      <Reveal>
-        <div>
+      <Reveal className="min-w-0">
+        <div className="min-w-0">
           <Badge className="mb-6 gap-2">
             <Sparkles className="h-3.5 w-3.5" />
             Available for Full Stack opportunities
@@ -44,7 +44,7 @@ export function Hero() {
 
           <div className="mt-6 inline-flex max-w-full items-center gap-3 rounded-md border border-border bg-card px-4 py-3 font-mono text-sm text-muted-foreground shadow-soft">
             <TerminalSquare className="h-4 w-4 shrink-0 text-accent" />
-            <span className="truncate">
+            <span className="min-w-0 truncate">
               building internal platforms, APIs, and workflow automations
             </span>
           </div>
@@ -64,7 +64,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 flex min-w-0 items-center gap-3">
             <a
               href={profile.links.github}
               target="_blank"
@@ -86,15 +86,15 @@ export function Hero() {
               <BriefcaseBusiness className="h-4 w-4" />
             </a>
             <span className="h-px w-12 bg-border" />
-            <span className="text-sm text-muted-foreground">
+            <span className="min-w-0 text-sm text-muted-foreground">
               Based in Portugal, building for the web.
             </span>
           </div>
         </div>
       </Reveal>
 
-      <Reveal delay={0.12}>
-        <div className="relative mx-auto w-full max-w-[28rem]">
+      <Reveal delay={0.12} className="min-w-0">
+        <div className="relative mx-auto w-full max-w-[28rem] min-w-0">
           <div className="absolute -right-4 top-10 hidden rounded-md border border-border bg-card px-4 py-3 shadow-soft sm:block">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               Focus
