@@ -103,6 +103,13 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <span className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/20 bg-primary/10 px-3 text-xs font-semibold text-primary">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            Open to work
+          </span>
           <button
             type="button"
             onClick={toggleTheme}
@@ -161,6 +168,13 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <span className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/20 bg-primary/10 px-3 text-xs font-semibold text-primary">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
+              Open to work
+            </span>
             <a
               href={profile.links.cv}
               onClick={closeMenu}

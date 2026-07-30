@@ -4,7 +4,6 @@ import { FormEvent, useState } from "react";
 import { BriefcaseBusiness, Code2, Mail, Send } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/data/portfolio";
 
@@ -61,11 +60,24 @@ export function Contact() {
   return (
     <section id="contact" className="section-spacing">
       <div className="container-shell">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Open to Full Stack Developer opportunities."
-          description="Available for roles in Portugal, hybrid or remote positions, and international teams looking for a developer comfortable across frontend, backend, APIs, and workflow automation."
-        />
+        <Reveal>
+          <div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Contact
+              </p>
+              <h2 className="mt-3 text-balance text-4xl font-bold tracking-normal text-foreground sm:text-5xl">
+                Let&apos;s build useful software.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-7 text-muted-foreground lg:justify-self-end">
+              Available for Full Stack Developer roles in Portugal, hybrid or
+              remote positions, and international teams looking for someone
+              comfortable across frontend, backend, APIs, and workflow
+              automation.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>

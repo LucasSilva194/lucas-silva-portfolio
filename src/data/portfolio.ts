@@ -7,6 +7,7 @@ import {
   RefreshCcw,
   Rocket,
   Server,
+  ShieldCheck,
   TestTube2,
   TrendingUp,
 } from "lucide-react";
@@ -222,6 +223,7 @@ export const projects = [
   {
     slug: "cdi-chatbot",
     name: "CDI Chatbot",
+    categories: ["AI", "Web App", "Backend"],
     tagline: "Customer support automation for an investment education brand.",
     description:
       "Customer support chatbot for Ciências do Investimento, built with a Vue 3 widget and a Java 21 Spring Boot API. It handles FAQ-style support, conversation state, safe escalation to human support, and financial-advice guardrails.",
@@ -253,6 +255,7 @@ export const projects = [
   {
     slug: "ciencias-do-investimento-website",
     name: "Ciências do Investimento Website",
+    categories: ["Shopify", "Frontend"],
     tagline: "Shopify website with custom Liquid, CSS, JavaScript, and GraphQL work.",
     description:
       "Built on Shopify with custom code for an investment consulting and financial education brand, focused on content structure, service discovery, and brand consistency.",
@@ -277,6 +280,7 @@ export const projects = [
   {
     slug: "portugal-solucoes-website",
     name: "Portugal Soluções Website",
+    categories: ["Shopify", "Frontend"],
     tagline: "Shopify website for Portugal-focused advisory services.",
     description:
       "Built on Shopify with custom code for Portugal Soluções, presenting advisory services, training, articles, and contact pathways for clients interested in Portugal-based solutions.",
@@ -297,5 +301,32 @@ export const projects = [
       "Used Liquid and frontend customization to adapt the Shopify experience to the brand.",
       "Supported content structure and ongoing improvements to the publishing workflow.",
     ],
+  },
+];
+
+export const resumeSnapshot = [
+  {
+    label: "Team",
+    value: "7 engineers",
+    detail: "Owning and evolving internal platforms together.",
+    icon: Briefcase,
+  },
+  {
+    label: "Platforms",
+    value: "5 internal platforms",
+    detail: "Used across operational and business workflows.",
+    icon: Layers3,
+  },
+  {
+    label: "Stack",
+    value: "TypeScript + Java",
+    detail: "Vue 3, React, Spring, Spring Batch, and Quarkus.",
+    icon: ShieldCheck,
+  },
+  {
+    label: "Ownership",
+    value: "UI, API, data",
+    detail: "Full stack responsibility across product layers.",
+    icon: Rocket,
   },
 ];

@@ -21,6 +21,13 @@ export function Projects() {
             <Reveal key={project.name} delay={index * 0.06}>
               <article className="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/45">
                 <div className="flex-1">
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {project.categories.map((category) => (
+                      <Badge key={category} tone="accent">
+                        {category}
+                      </Badge>
+                    ))}
+                  </div>
                   <h3 className="text-xl font-bold text-card-foreground">
                     {project.name}
                   </h3>

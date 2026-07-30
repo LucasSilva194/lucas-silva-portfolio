@@ -7,6 +7,7 @@ import {
   Mail,
   MapPin,
   Sparkles,
+  TerminalSquare,
 } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
@@ -40,6 +41,13 @@ export function Hero() {
           <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">
             {profile.shortDescription}
           </p>
+
+          <div className="mt-6 inline-flex max-w-full items-center gap-3 rounded-md border border-border bg-card px-4 py-3 font-mono text-sm text-muted-foreground shadow-soft">
+            <TerminalSquare className="h-4 w-4 shrink-0 text-accent" />
+            <span className="truncate">
+              building internal platforms, APIs, and workflow automations
+            </span>
+          </div>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button href="#projects">
