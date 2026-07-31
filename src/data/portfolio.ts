@@ -1,4 +1,5 @@
 import {
+  Award,
   Briefcase,
   Code2,
   Database,
@@ -328,5 +329,22 @@ export const resumeSnapshot = [
     value: "UI, API, data",
     detail: "Full stack responsibility across product layers.",
     icon: Rocket,
+  },
+];
+
+export const certificationGroups = [
+  {
+    issuer: "Anthropic",
+    icon: Award,
+    certifications: [
+      {
+        name: "Claude Code in Action",
+        verificationUrl: "https://verify.skilljar.com/c/ioc2qyhh29yu",
+      },
+      {
+        name: "Claude Code 101",
+        verificationUrl: "https://verify.skilljar.com/c/z55geyrhq5mv",
+      },
+    ],
   },
 ];
