@@ -38,7 +38,10 @@ export function Certifications() {
                       </div>
                     </div>
                     <Badge tone="accent">
-                      {group.certifications.length} certificates
+                      {group.certifications.length}{" "}
+                      {group.certifications.length === 1
+                        ? "certificate"
+                        : "certificates"}
                     </Badge>
                   </div>
 

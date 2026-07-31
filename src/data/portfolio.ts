@@ -347,4 +347,26 @@ export const certificationGroups = [
       },
     ],
   },
+  {
+    issuer: "OpenAI",
+    icon: Award,
+    certifications: [
+      {
+        name: "AI Foundations",
+        verificationUrl:
+          "https://academy.openai.com/public/certificate/3y2u9s84ul",
+      },
+    ],
+  },
+  {
+    issuer: "HackerRank",
+    icon: Award,
+    certifications: [
+      {
+        name: "SQL (Basic)",
+        verificationUrl:
+          "https://www.hackerrank.com/certificates/iframe/b63bc5f9f3c1",
+      },
+    ],
+  },
 ];
