@@ -14,7 +14,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Projects />
       </main>
       <Footer />

@@ -2,18 +2,18 @@ import { Footer } from "@/components/Footer";
 import { Certifications } from "@/components/Certifications";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { Projects } from "@/components/Projects";
+import { HomeProjects } from "@/components/HomeProjects";
+import { HomeSkills } from "@/components/HomeSkills";
 import { ResumeSnapshot } from "@/components/ResumeSnapshot";
-import { Skills } from "@/components/Skills";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content" className="w-full max-w-full overflow-x-hidden">
         <Hero />
-        <Skills />
-        <Projects />
+        <HomeSkills />
+        <HomeProjects />
         <ResumeSnapshot />
         <Certifications />
       </main>

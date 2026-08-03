@@ -1,7 +1,32 @@
-import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Badge } from "@/components/ui/Badge";
-import { skillGroups, technologyJourney } from "@/data/portfolio";
+import { skillGroups } from "@/data/portfolio";
+
+const accordionGroups = [
+  {
+    title: "Core",
+    description: "The languages behind product work and platform logic.",
+    skills: skillGroups[0].skills,
+  },
+  {
+    title: "Interfaces",
+    description: "Responsive, maintainable web experiences for real teams.",
+    skills: skillGroups[1].skills,
+  },
+  {
+    title: "Systems",
+    description: "Services, data, and the contracts that keep them reliable.",
+    skills: [...skillGroups[2].skills, ...skillGroups[3].skills],
+  },
+  {
+    title: "Delivery",
+    description: "Integrations, deployment, source control, and testing.",
+    skills: [
+      ...skillGroups[4].skills,
+      ...skillGroups[5].skills,
+      ...skillGroups[6].skills,
+    ],
+  },
+];
 
 export function Skills() {
   return (
@@ -9,69 +34,39 @@ export function Skills() {
       <div className="container-shell">
         <SectionHeading
           eyebrow="Skills"
-          title="A full stack toolkit for modern product teams."
-          description="A practical overview of the technologies I use across frontend delivery, backend systems, data, tooling, methods, and design productivity."
+          title="One toolkit, from interface to infrastructure."
+          description="I work across the full delivery path: shaping the interaction, building the service behind it, and keeping the system understandable after launch."
         />
 
-        <div className="rounded-lg border-y border-border/70">
-          {skillGroups.map((group, index) => {
-            const Icon = group.icon;
+        <div className="flex min-h-[42rem] flex-col overflow-hidden rounded-lg border border-border bg-border lg:min-h-[34rem] lg:flex-row">
+          {accordionGroups.map((group) => (
+            <article
+              key={group.title}
+              className="group relative flex flex-1 flex-col justify-between overflow-hidden bg-card p-6 transition-[flex-grow,background-color] duration-700 ease-out hover:flex-[2.15] hover:bg-muted/70 lg:p-8"
+            >
+              <div className="absolute inset-y-0 right-0 hidden w-px bg-border lg:block" />
+              <div>
+                <span className="block h-1 w-10 bg-primary transition-all duration-500 group-hover:w-20" />
+                <h3 className="mt-7 text-3xl font-medium tracking-[-0.045em] text-foreground [writing-mode:horizontal-tb] lg:text-4xl">
+                  {group.title}
+                </h3>
+                <p className="mt-5 max-w-xs text-sm leading-6 text-muted-foreground opacity-100 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100">
+                  {group.description}
+                </p>
+              </div>
 
-            return (
-              <Reveal key={group.title} delay={index * 0.05}>
-                <div className="grid gap-4 border-b border-border/70 py-5 last:border-b-0 md:grid-cols-[13rem_1fr] md:items-center">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary/10 text-primary">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                      {group.title}
-                    </h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {group.skills.map((skill) => (
-                      <Badge key={skill} tone="muted">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
-
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          {technologyJourney.map((group, index) => {
-            const Icon = group.icon;
-
-            return (
-              <Reveal key={group.title} delay={0.18 + index * 0.06}>
-                <article className="h-full rounded-lg border border-border bg-card p-6 shadow-soft">
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-accent/10 text-accent">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-bold text-card-foreground">
-                        {group.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                        {group.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <Badge key={item} tone="muted">
-                        {item}
-                      </Badge>
-                    ))}
-                  </div>
-                </article>
-              </Reveal>
-            );
-          })}
+              <div className="mt-12 flex max-w-sm flex-wrap gap-2 lg:translate-y-4 lg:opacity-0 lg:transition-all lg:duration-500 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="inline-flex rounded-full border border-primary/15 bg-primary/[0.07] px-3 py-1.5 text-xs font-medium text-foreground"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

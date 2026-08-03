@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Contact />
       </main>
       <Footer />

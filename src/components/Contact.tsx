@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { BriefcaseBusiness, Code2, Mail, Send } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/Button";
@@ -11,6 +12,7 @@ export function Contact() {
   const [status, setStatus] = useState("");
   const [statusTone, setStatusTone] = useState<"success" | "error">("success");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -173,20 +175,63 @@ export function Contact() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button type="submit" disabled={isSubmitting}>
                   <Send className="h-4 w-4" />
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  <span className="grid min-w-[6.5rem] place-items-center">
+                    <AnimatePresence initial={false} mode="popLayout">
+                      <motion.span
+                        key={isSubmitting ? "sending" : "ready"}
+                        initial={
+                          prefersReducedMotion
+                            ? { opacity: 0 }
+                            : { opacity: 0, y: 4 }
+                        }
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={
+                          prefersReducedMotion
+                            ? { opacity: 0 }
+                            : { opacity: 0, y: -4 }
+                        }
+                        transition={
+                          prefersReducedMotion
+                            ? { duration: 0.1 }
+                            : { type: "spring", bounce: 0, duration: 0.22 }
+                        }
+                        className="col-start-1 row-start-1"
+                      >
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                      </motion.span>
+                    </AnimatePresence>
+                  </span>
                 </Button>
-                {status ? (
-                  <p
-                    className={
-                      statusTone === "success"
-                        ? "text-sm text-muted-foreground"
-                        : "text-sm text-red-500"
-                    }
-                    role="status"
-                  >
-                    {status}
-                  </p>
-                ) : null}
+                <AnimatePresence initial={false}>
+                  {status ? (
+                    <motion.p
+                      initial={
+                        prefersReducedMotion
+                          ? { opacity: 0 }
+                          : { opacity: 0, y: 6 }
+                      }
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={
+                        prefersReducedMotion
+                          ? { opacity: 0 }
+                          : { opacity: 0, y: -4 }
+                      }
+                      transition={
+                        prefersReducedMotion
+                          ? { duration: 0.12 }
+                          : { type: "spring", bounce: 0, duration: 0.28 }
+                      }
+                      className={
+                        statusTone === "success"
+                          ? "text-sm text-muted-foreground"
+                          : "text-sm text-red-500"
+                      }
+                      role="status"
+                    >
+                      {status}
+                    </motion.p>
+                  ) : null}
+                </AnimatePresence>
               </div>
             </form>
           </Reveal>

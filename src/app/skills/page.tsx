@@ -14,7 +14,7 @@ export default function SkillsPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Skills />
       </main>
       <Footer />

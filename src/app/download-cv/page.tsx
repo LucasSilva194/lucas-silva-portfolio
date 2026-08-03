@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 
 export default function DownloadCvPage() {
   return (
-    <main className="container-shell flex min-h-[calc(100vh-4rem)] items-center justify-center py-20">
-      <section className="max-w-xl rounded-lg border border-border bg-card p-8 text-center shadow-soft">
-        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+    <main id="main-content" className="container-shell flex min-h-[calc(100dvh-4rem)] items-center justify-center py-20">
+      <section className="max-w-xl border-y border-border py-10 text-center">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
           <Download className="h-5 w-5" />
         </span>
-        <h1 className="mt-6 text-3xl font-bold text-card-foreground">
+        <h1 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-card-foreground">
           Preparing CV download
         </h1>
         <p className="mt-4 text-sm leading-6 text-muted-foreground">

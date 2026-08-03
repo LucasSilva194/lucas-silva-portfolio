@@ -56,7 +56,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,900&display=swap"
+        />
+      </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         {children}
         <Analytics />
       </body>

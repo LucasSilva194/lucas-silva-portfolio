@@ -1,13 +1,13 @@
 :root {
-  --primary: #7c3aed;
-  --primary-foreground: #ffffff;
-  --accent: #38bdf8;
-  --accent-foreground: #071827;
+  --primary: #6842a3;
+  --primary-foreground: #f7f6f0;
+  --accent: #6842a3;
+  --accent-foreground: #4b287f;
 }
 
 .dark {
-  --primary: #c084fc;
-  --primary-foreground: #071010;
-  --accent: #38bdf8;
-  --accent-foreground: #071827;
+  --primary: #c4a4ff;
+  --primary-foreground: #1c102f;
+  --accent: #c4a4ff;
+  --accent-foreground: #dac8ff;
 }

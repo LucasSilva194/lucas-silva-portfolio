@@ -18,7 +18,7 @@ export function DownloadCvRedirect({ href }: DownloadCvRedirectProps) {
   return (
     <a
       href={href}
-      className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition hover:-translate-y-0.5 hover:brightness-105"
+      className="inline-flex h-11 items-center justify-center rounded-sm bg-primary px-5 text-sm font-semibold text-primary-foreground transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-px"
     >
       Open CV now
     </a>

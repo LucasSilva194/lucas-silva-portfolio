@@ -5,14 +5,14 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex h-11 items-center justify-center gap-2 rounded-sm px-5 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 active:translate-y-px active:scale-[0.97] active:duration-100 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground shadow-[0_18px_40px_-22px_var(--primary)] hover:-translate-y-0.5 hover:brightness-105",
+          "bg-primary text-primary-foreground shadow-[0_18px_40px_-24px_var(--primary)] hover:-translate-y-0.5 hover:brightness-110",
         secondary:
-          "border border-border bg-card text-card-foreground hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary",
+          "border border-border bg-transparent text-card-foreground hover:-translate-y-0.5 hover:border-primary hover:text-primary",
         ghost:
           "text-muted-foreground hover:bg-muted hover:text-foreground",
       },

@@ -58,7 +58,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <section className="section-spacing">
           <div className="container-shell">
             <Button href="/projects" variant="ghost" className="mb-8">

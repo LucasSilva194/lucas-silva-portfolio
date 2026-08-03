@@ -14,7 +14,7 @@ export default function ExperiencePage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Experience />
       </main>
       <Footer />

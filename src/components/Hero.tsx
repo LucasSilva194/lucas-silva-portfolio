@@ -1,123 +1,65 @@
 import Image from "next/image";
-import {
-  ArrowRight,
-  BriefcaseBusiness,
-  Code2,
-  Download,
-  Mail,
-  MapPin,
-  Sparkles,
-  TerminalSquare,
-} from "lucide-react";
+import { ArrowDownRight, ArrowRight } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import TextThree from "@/components/ui/text-three";
 import { profile } from "@/data/portfolio";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="container-shell grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20"
+      className="container-shell grid min-h-[calc(100dvh-5rem)] items-center gap-16 pb-24 pt-20 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20 lg:pb-32 lg:pt-28"
     >
-      <Reveal className="min-w-0">
-        <div className="min-w-0">
-          <Badge className="mb-6 gap-2">
-            <Sparkles className="h-3.5 w-3.5" />
-            Available for Full Stack opportunities
-          </Badge>
+      <Reveal className="relative z-10 min-w-0">
+        <p className="mb-7 max-w-xl text-lg leading-8 text-muted-foreground">
+          Full stack developer in Portugal, working across interfaces, APIs,
+          data, and the workflows between them.
+        </p>
 
-          <h1 className="text-balance text-5xl font-bold tracking-normal text-foreground sm:text-6xl lg:text-7xl">
-            {profile.name}
-          </h1>
-          <p className="mt-4 text-2xl font-semibold text-primary sm:text-3xl">
-            {profile.role}
-          </p>
-          <p className="mt-4 flex items-center gap-2 text-sm font-medium text-muted-foreground sm:text-base">
-            <MapPin className="h-4 w-4 text-accent" />
-            {profile.location}
-          </p>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">
-            {profile.shortDescription}
-          </p>
+        <h1 className="w-full max-w-6xl text-[clamp(3.7rem,7.2vw,7.4rem)] font-medium leading-[0.84] tracking-[-0.075em] text-foreground">
+          <TextThree text="Lucas Silva." speed={72} />
+          <TextThree
+            text="Software that works."
+            speed={58}
+            startDelay={950}
+            className="mt-3 text-primary"
+          />
+        </h1>
 
-          <div className="mt-6 inline-flex max-w-full items-center gap-3 rounded-md border border-border bg-card px-4 py-3 font-mono text-sm text-muted-foreground shadow-soft">
-            <TerminalSquare className="h-4 w-4 shrink-0 text-accent" />
-            <span className="min-w-0 truncate">
-              building internal platforms, APIs, and workflow automations
-            </span>
-          </div>
+        <p className="mt-8 max-w-[62ch] text-base leading-7 text-muted-foreground sm:text-lg">
+          {profile.shortDescription}
+        </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="#projects">
-              View Projects
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button href="/contact" variant="secondary">
-              <Mail className="h-4 w-4" />
-              Contact
-            </Button>
-            <Button href={profile.links.cv} variant="ghost">
-              <Download className="h-4 w-4" />
-              Download CV
-            </Button>
-          </div>
-
-          <div className="mt-8 flex min-w-0 items-center gap-3">
-            <a
-              href={profile.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-              aria-label="GitHub profile"
-              title="GitHub"
-            >
-              <Code2 className="h-4 w-4" />
-            </a>
-            <a
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-              aria-label="LinkedIn profile"
-              title="LinkedIn"
-            >
-              <BriefcaseBusiness className="h-4 w-4" />
-            </a>
-            <span className="h-px w-12 bg-border" />
-            <span className="min-w-0 text-sm text-muted-foreground">
-              Based in Portugal, building for the web.
-            </span>
-          </div>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <Button href="#projects">
+            Explore selected work
+            <ArrowDownRight className="h-4 w-4" />
+          </Button>
+          <Button href="/contact" variant="secondary">
+            Start a conversation
+            <ArrowRight className="h-4 w-4" />
+          </Button>
         </div>
       </Reveal>
 
-      <Reveal delay={0.12} className="min-w-0">
-        <div className="relative mx-auto w-full max-w-[28rem] min-w-0">
-          <div className="absolute -right-4 top-10 hidden rounded-md border border-border bg-card px-4 py-3 shadow-soft sm:block">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Focus
-            </p>
-            <p className="mt-1 text-sm font-semibold">APIs + Web Apps</p>
-          </div>
-          <div className="absolute -bottom-4 -left-4 hidden rounded-md border border-border bg-card px-4 py-3 shadow-soft sm:block">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Stack
-            </p>
-            <p className="mt-1 text-sm font-semibold">TypeScript / Java</p>
-          </div>
-          <div className="overflow-hidden rounded-lg border border-border bg-card p-3 shadow-soft">
-            <Image
-              src="/images/lucas-silva.jpg"
-              alt="Portrait of Lucas Silva"
-              width={720}
-              height={720}
-              priority
-              className="aspect-square w-full rounded-md object-cover object-[52%_42%]"
-            />
-          </div>
+      <Reveal delay={0.12} className="relative min-w-0 lg:translate-y-10">
+        <div className="group relative ml-auto aspect-[4/5] w-full max-w-[27rem] overflow-hidden rounded-lg bg-muted shadow-[0_35px_100px_-55px_var(--foreground)]">
+          <Image
+            src="/images/lucas-silva.jpg"
+            alt="Lucas Silva at a professional event"
+            fill
+            priority
+            sizes="(max-width: 1024px) 90vw, 34vw"
+            className="object-cover object-[52%_42%] saturate-[0.82] transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1c102f]/45 via-transparent to-transparent" />
         </div>
+        <p className="ml-auto mt-5 max-w-[27rem] border-t border-border pt-4 font-mono text-xs leading-5 text-muted-foreground">
+          Based in {profile.location}. Currently building internal platforms,
+          APIs, and workflow automation.
+        </p>
       </Reveal>
     </section>
   );
