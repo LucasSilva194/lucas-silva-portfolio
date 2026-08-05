@@ -367,6 +367,11 @@ export const certificationGroups = [
         verificationUrl:
           "https://www.hackerrank.com/certificates/iframe/b63bc5f9f3c1",
       },
+      {
+        name: "SQL (Intermediate)",
+        verificationUrl:
+          "https://www.hackerrank.com/certificates/iframe/9584174b6a37",
+      },
     ],
   },
 ];
